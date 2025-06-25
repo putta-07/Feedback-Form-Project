@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank You!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .thankyou-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+      animation: fadeIn 1.2s ease;
+      color: #4E54C8;
+    }
+
+    .thankyou-container h1 {
+      font-size: 28px;
+      color: #4E54C8;
+    }
+
+    .loader-text {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      display: inline-block;
+      background: linear-gradient(to right, #4E54C8, #8F94FB);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-container">
+    <div id="loading" class="loader-text">You are responded...</div>
+    <div id="message" class="hidden">
+      <h1>🎉 Thank You for Your Feedback!</h1>
+      <p>We appreciate your time and support. 💖</p>
+      <a class="back-btn" href="index.html">Go Back to Main Page</a>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("loading").classList.add("hidden");
+      document.getElementById("message").classList.remove("hidden");
+    }, 2000); // 2 seconds delay
+  </script>
+</body>
+</html>
